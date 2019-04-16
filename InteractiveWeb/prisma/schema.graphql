@@ -1,0 +1,51 @@
+type Query {
+  getIndexValues(country_code: ID! , field_code: ID!, method_code: ID!): RespWrap!
+}
+
+type Country {
+  id: ID!
+  gdppc2017: Float
+  incomelevel: String
+  iso2code: String
+  iso3code: String
+  lendingtype: String
+  pop2017: Int
+  region: String
+  wb_name: String
+  my_name: String!
+  totdocs: Int!
+}
+
+type Method {
+  id: ID!
+  name: String!
+  level: String! 
+  scopus_code: String!
+  scopus_name: String!
+}
+
+type Field {
+  id: ID!
+  minmax: String!
+  short_name: String!
+  full_name:String!
+  short_desc: String
+  long_desc: String
+  formula: String
+}
+
+type Interindex {
+  id: ID!
+  country_code: Country!
+  field_code: Field!
+  method_code: Method!
+  period: Int!
+  value: Float
+}
+
+type RespWrap {
+  id: ID!
+  interindexes: [Interindex]
+  countries: [Country]
+  fields: [Field]
+}

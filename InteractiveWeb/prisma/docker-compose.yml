@@ -1,0 +1,23 @@
+version: '2'
+services:
+  prisma:
+    image: prismagraphql/prisma:1.17
+    restart: always
+    ports:
+    - "4466:4466"
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        # uncomment the next line and provide the env var PRISMA_MANAGEMENT_API_SECRET=my-secret to activate cluster security
+        # managementApiSecret: my-secret
+        databases:
+          default:
+            connector: postgres
+            host: science-internationality-dbinstance.c3aa5fkeiz2h.us-east-2.rds.amazonaws.com
+            port: 5432
+            database: scienceInternationalitydb
+            schema: public
+            user: root
+            password: IDEA_science2018
+            migrations: false
+            ssl: false
