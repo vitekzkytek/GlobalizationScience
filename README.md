@@ -3,7 +3,7 @@
 Evidence from Authors in Academic Journalsby Country of Origin
 By Vítek Macháček and Martin Srholec
 
-see (http://www.globalizationofscience.com/)[http://www.globalizationofscience.com/]
+see [http://www.globalizationofscience.com/](http://www.globalizationofscience.com/)
 
 
 ## Repo Contents:
