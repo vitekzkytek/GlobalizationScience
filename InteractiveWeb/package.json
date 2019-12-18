@@ -1,9 +1,9 @@
 {
-  "name": "main",
+  "name": "globalization_app",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./app/bin/www"
   },
   "dependencies": {
     "apollo-fetch": "^0.7.0",
@@ -12,7 +12,7 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "pg": "^7.9.0",
-    "pug": "^2.0.0-beta11"
+    "pug": "^2.0.0-beta11",
+    "pg": "~7.9.0"
   }
 }

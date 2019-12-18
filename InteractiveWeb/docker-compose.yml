@@ -1,44 +1,26 @@
-version: "3"
+version: '3'
+
 services:
-  db:
-    image: postgres:10
-    environment:
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_USER=root
-      - POSTGRES_DB=root
-    volumes: 
-      - ./DataForDB:/data-for-db
-    restart: always
-
-  prisma:
-    image: prismagraphql/prisma:1.17
-    restart: always
-    ports:
-      - "4466:4466"
-    environment:
-      PRISMA_CONFIG: |
-        port: 4466
-        databases:
-          default:
-            connector: postgres
-            host: db
-            port: 5432
-            database: root
-            schema: public
-            user: root
-            password: root
-            migrations: false
-            ssl: false
-
-  adminer:
-    image: clue/adminer
-    ports:
-      - 8081:80
-
-  app:
-    build: .
-    ports:
-      - 8080:8080
-    environment:
-      # PRISMA_URL: http://ec2-18-188-88-0.us-east-2.compute.amazonaws.com:4466
-      PRISMA_URL: http://prisma:4466
+   db:
+      image: postgres:9.4
+      restart: 'no'
+      environment:
+         POSTGRES_PASSWORD: postgres
+         POSTGRES_USER: postgres
+         POSTGRES_DB: scienceInternationalitydb
+      volumes:
+         - ./db/GlobalizationData.sql:/docker-entrypoint-initdb.d/init.sql
+   globalization_app:
+      build:
+         context: .
+         dockerfile: Dockerfile
+      image: nodejs
+      restart: 'no'
+      container_name: nodejs
+      volumes:
+         - ./app:/home/node/app
+      environment:
+         PORT: 8080
+      ports:
+         - "8080:8080"
+     
