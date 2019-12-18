@@ -38,5 +38,5 @@ Run container:
 
 1. Install Docker
 2. go to `/InteractiveWeb/`
-3. docker-compose up
+3. `docker-compose up`
 
