@@ -26,6 +26,7 @@ contains various methods to calculate globalization from data stored in SQLite i
 `20181218_AllFieldsCountriesMethods_bot_all.csv` contains data for bottom level of disciplines (Scopus subject areas)
 `20181218_AllFieldsCountriesMethods_TOP.xlsx` contains data for top level of disciplines (Life Sciences, Physical Sciences, Medical Sciences, Social Sciences)
 
+Detailed methodology is described in the interactive application
  
  ### `/TransformToWeb/`
  Transform data from previous section into a web readable data that can be feeded into the database
