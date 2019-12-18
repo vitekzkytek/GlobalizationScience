@@ -30,10 +30,12 @@ Detailed methodology is described in the interactive application
  
  ### `/TransformToWeb/`
  Transform data from previous section into a web readable data that can be feeded into the database
- 
+ Main method: `processDataForWeb()` in `transform.py`
  
  ### `/InteractiveWeb/`
  Deployment-ready Docker container to launch the app anywhere.
+ 
+ For now the database is feeded from a simple dump and therefore Docker would not reflect changes in the computational part.
  
 Run container:
 
