@@ -14,13 +14,13 @@ services:
       build:
          context: .
          dockerfile: Dockerfile
-      image: nodejs
+      image: docker
       restart: 'no'
       container_name: nodejs
       volumes:
          - ./app:/home/node/app
       environment:
-         PORT: 8080
+         PORT: 8082
       ports:
-         - "8080:8080"
+         - "80:8082"
      
