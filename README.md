@@ -40,6 +40,9 @@ Detailed methodology is described in the interactive application
 Run container:
 
 1. Install Docker [see here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
-2. go to `/InteractiveWeb/`
-3. `docker-compose up`
+2. `sudo apt install docker-compose`
+3. ` cd /srv/`
+4. `git clone https://github.com/vitekzkytek/GlobalizationScience.git
+2. `cd /srv/GlobalizationScience/InteractiveWeb/`
+3. `docker-compose up -d`
 
