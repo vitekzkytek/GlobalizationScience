@@ -39,7 +39,7 @@ Detailed methodology is described in the interactive application
  
 Run container:
 
-1. Install Docker [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](see here)
+1. Install Docker [see here](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 2. go to `/InteractiveWeb/`
 3. `docker-compose up`
 
